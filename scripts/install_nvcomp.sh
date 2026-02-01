@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+NVCOMP_URL="https://developer.download.nvidia.com/compute/nvcomp/redist/nvcomp/linux-x86_64/nvcomp-linux-x86_64-5.1.0.21_cuda13-archive.tar.xz"
+
 if [[ -z "${NVCOMP_URL:-}" ]]; then
   echo "NVCOMP_URL is not set. Provide a direct nvCOMP SDK URL or preinstall nvCOMP in the image."
   exit 1
