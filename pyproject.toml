@@ -9,7 +9,7 @@ description = "Minimal PyTorch CUDA extension wrapping nvCOMP codecs (LZ4/Zstd/C
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
-dependencies = ["torch>=2.10.0"]
+dependencies = ["torch>=2.6.0"]
 
 [tool.setuptools.packages.find]
 where = ["."]
