@@ -45,3 +45,9 @@ twine upload dist/*
 
 Note: the wheel does **not** bundle `libnvcomp.so`. Users must install nvCOMP
 and set `LD_LIBRARY_PATH` (or rpath) so the loader can find the library.
+
+## CI (cibuildwheel)
+
+This repo includes a GitHub Actions workflow that uses cibuildwheel. It expects
+`NVCOMP_URL` to be set as a secret pointing to a downloadable nvCOMP SDK tarball.
+The workflow installs nvCOMP into `/opt/nvcomp` and builds manylinux wheels.
