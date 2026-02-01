@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=65", "wheel", "torch>=2.10.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytorch-nvcomp"
+version = "0.1.0"
+description = "Minimal PyTorch CUDA extension wrapping nvCOMP codecs (LZ4/Zstd/Cascaded)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = ["torch>=2.10.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
