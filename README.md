@@ -51,3 +51,8 @@ and set `LD_LIBRARY_PATH` (or rpath) so the loader can find the library.
 This repo includes a GitHub Actions workflow that uses cibuildwheel. It expects
 `NVCOMP_URL` to be set as a secret pointing to a downloadable nvCOMP SDK tarball.
 The workflow installs nvCOMP into `/opt/nvcomp` and builds manylinux wheels.
+
+## Publish (CI)
+
+Tag a release (e.g. `v0.1.0`) and push the tag. The `publish.yml` workflow will
+build wheels and upload them to PyPI using the `PYPI_API_TOKEN` secret.
