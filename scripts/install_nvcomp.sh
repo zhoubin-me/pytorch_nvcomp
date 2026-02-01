@@ -12,9 +12,9 @@ tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
 
 echo "Downloading nvCOMP from ${NVCOMP_URL}"
-curl -L "$NVCOMP_URL" -o "$tmp_dir/nvcomp.tgz"
+curl -L "$NVCOMP_URL" -o "$tmp_dir/nvcomp.tar.xz"
 
 mkdir -p /opt/nvcomp
-tar -xzf "$tmp_dir/nvcomp.tgz" -C /opt/nvcomp --strip-components=1
+tar -xJf "$tmp_dir/nvcomp.tar.xz" -C /opt/nvcomp --strip-components=1
 
 echo "Installed nvCOMP to /opt/nvcomp"
